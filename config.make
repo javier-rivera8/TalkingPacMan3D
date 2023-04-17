@@ -8,7 +8,7 @@
 #   The location of your root openFrameworks installation
 #       (default) OF_ROOT = ../../.. 
 ################################################################################
-OF_ROOT = C:\Users\javie\Documents\OneDriveUni\OneDrive\Documents\of_v0.11.2_msys2_mingw32_release
+# OF_ROOT = ../../..
 
 ################################################################################
 # PROJECT ROOT
@@ -115,7 +115,7 @@ OF_ROOT = C:\Users\javie\Documents\OneDriveUni\OneDrive\Documents\of_v0.11.2_msy
 #
 #   Note: Leave a leading space when adding list items with the += operator
 ################################################################################
-# PROJECT_CFLAGS = 
+PROJECT_CFLAGS = -g
 
 ################################################################################
 # PROJECT OPTIMIZATION CFLAGS
