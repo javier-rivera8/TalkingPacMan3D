@@ -36,6 +36,7 @@ class ofApp : public ofBaseApp{
 		bool realease = false;
 		bool eating = false;
 		bool pause = false;
+		bool marketB = false;
 
 		double posX = 0;
 		double posY = 0;
@@ -50,6 +51,9 @@ class ofApp : public ofBaseApp{
 	ofImage bread;
 	ofImage menu;
 	ofImage settings;
+	ofImage coin;
+	ofImage market;
 
 	ofSoundPlayer troll;
+	ofTrueTypeFont money;
 };

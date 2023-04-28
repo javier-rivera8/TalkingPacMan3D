@@ -8,12 +8,15 @@ void ofApp::setup(){
     pacHear.load("PACTECA5.png");
     pacTalk.load("PACTECA3.png");
     pacFullOpen.load("PACTECA4.png");
+    coin.load("coin.png");
 
     //assetes---------------------------------------------------
     troll.load("TROLL1.mp3");
     bread.load("Pan2.png");
     menu.load("menu2.png");
     settings.load("menu3.png");
+    market.load("market.png");
+    money.load("Futura Bold font.ttf", 100);
 }
 
 //--------------------------------------------------------------
@@ -40,6 +43,7 @@ void ofApp::update(){
 void ofApp::draw(){
     cntr += 1;
     hlthcntr += 1;
+
 
     if(hear == false && talk == false && eat == false){
         if(cntr < 30){
@@ -144,14 +148,21 @@ void ofApp::draw(){
     ofDrawRectangle(ofGetWidth()/2 - 300, ofGetHeight() - 100, 650, 20);
     ofFill();
     bread.draw(xPan, yPan, 200, 200);
+
+    coin.draw(0, 20);
+    money.drawString("254", 1700, 150);
+    if(marketB){
+        market.draw(0, 0);
+    }
+    
     
 }
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-    if( key == 'p'){
-        pause = !pause;
-    }
+    // if( key == 'p'){
+    //     pause = !pause;
+    // }
     if( key == 't'){
         if(hear){
             hear = false;
@@ -162,6 +173,17 @@ void ofApp::keyPressed(int key){
             hear = true;
         }
     }
+    // if(key == 'm'){
+    //     if(pause){
+    //         marketB = true;
+    //         pause = false;
+
+    //     }
+    //     else{
+    //         marketB = false;
+    //         pause = true;
+    //     }
+    // }
 }
 
 //--------------------------------------------------------------
@@ -176,7 +198,7 @@ void ofApp::mouseMoved(int x, int y){
 
 //--------------------------------------------------------------
 void ofApp::mouseDragged(int x, int y, int button){
-    if( button == 0){
+    if(button == 0 && (((x > 92 && x < 400) && (y > 790 && y < 1000))|| food)){
         posX = x;
         posY = y;
         xPan = x -100;
@@ -188,7 +210,23 @@ void ofApp::mouseDragged(int x, int y, int button){
 
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button){
-
+    if(pause){
+        if(button == 0 && (x > 270 && x < 411) && (y > 232 && y < 332)){
+            marketB = true;
+            pause = false;
+        }
+    }
+    else if(marketB){
+        if(button == 0 && (x > 288 && x < 500) && (y > 657 && y < 717)){
+            pause = true;
+            marketB = false;
+        }
+    }
+    if(button == 0 && (x > 40 && x < 212 && y > 60 && y < 190)){
+        pause = !pause;
+        marketB = false;
+    }
+        
 }
 
 //--------------------------------------------------------------
