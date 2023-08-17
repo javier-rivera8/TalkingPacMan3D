@@ -32,5 +32,6 @@ Add sound effects and music to enhance the gaming experience.
 Provide visual feedback for actions.
 
 # Game Design:
-![PACTECA1](https://github.com/javier-rivera8/TalkingPacMan3D/assets/112108705/94d64a77-ebe2-4ffc-a63c-d7e6aa492586)
+![PACTECA1](https://github.com/javier-rivera8/TalkingPacMan3D/assets/112108705/94d64a77-ebe2-4ffc-a63c-d7e6aa492586)  
+<br>
 ![Screenshot (148)](https://github.com/javier-rivera8/TalkingPacMan3D/assets/112108705/0d5aee3a-616b-4dc8-b7e3-a5f809bfec54)
